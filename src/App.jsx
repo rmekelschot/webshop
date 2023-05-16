@@ -1,12 +1,14 @@
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Container, Grid } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import {
+  Container,
+  Grid,
+  Paper,
+  Rating,
+  Typography,
+  Button,
+} from "@mui/material";
 import Header from "./components/header/Header";
+import AddIcon from '@mui/icons-material/Add';
 
 function App() {
   const products = [
@@ -247,35 +249,65 @@ function App() {
   ];
   return (
     <Box>
-      <Header/>
+      <Header />
       <Container>
         <Grid container spacing={2}>
           {products.map((p) => {
             return (
               <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Card>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
+                {/* Link */}
+                <Paper elevation={1}>
+                  <Box>{/* Image */}</Box>
+                  <Box sx={{ p: "1rem" }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
                     >
-                      category
-                    </Typography>
-                    <Typography variant="h5" component="div">
-                      {p.title}
-                    </Typography>
-                  </CardContent>
-                  <CardActions
-                    sx={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <Typography variant="body1" sx={{fontWeight: 'bold'}}>&euro; {p.price}</Typography>
-                    <Button size="small" variant="contained">
-                      <Typography variant="button" sx={{pr:1}}>Add To Cart</Typography>
-                      <ShoppingCartIcon fontSize="small" />
-                    </Button>
-                  </CardActions>
-                </Card>
+                      <a href="/">
+                        <Box>
+                          <Typography
+                            variant="h3"
+                            sx={{
+                              fontSize: "14px",
+                              fontWeight: "600",
+                              color: "#373F50",
+                            }}
+                          >
+                            {p.title}
+                          </Typography>
+                          <Rating
+                            name="read-only"
+                            value={3}
+                            readOnly
+                            sx={{ my: 1 }}
+                          />
+                          <Typography
+                            variant="body1"
+                            sx={{
+                              fontSize: "14px",
+                              fontWeight: "600",
+                              color: "#D23F57",
+                            }}
+                          >
+                            &euro; {p.price}
+                          </Typography>
+                        </Box>
+                      </a>
+                      <Box>
+                        <Button
+                          sx={{ minWidth: "12px", width: '10px', aspectRatio: '1/1'}}
+                          variant="outlined"
+                          size="medium"
+                          color="error"
+                        >
+                          <AddIcon fontSize="small"/>
+                        </Button>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Paper>
               </Grid>
             );
           })}
