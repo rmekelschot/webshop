@@ -6,29 +6,253 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container, Grid } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Header from "./components/header/Header";
 
 function App() {
   const products = [
     {
-      title: "product 1",
+      title: "product",
       description: "product description",
       price: 11.25,
       id: 482991816,
     },
     {
-      title: "product 2",
-      description: "product 2 description",
-      price: 13.75,
-      id: 658878345,
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
+    },
+    {
+      title: "product",
+      description: "product description",
+      price: 11.25,
+      id: 482991816,
     },
   ];
   return (
     <Box>
+      <Header/>
       <Container>
         <Grid container spacing={2}>
           {products.map((p) => {
             return (
-              <Grid item sm={12} md={4} lg={3}>
+              <Grid item xs={12} sm={6} md={4} lg={3}>
                 <Card>
                   <CardContent>
                     <Typography
@@ -40,13 +264,6 @@ function App() {
                     </Typography>
                     <Typography variant="h5" component="div">
                       {p.title}
-                    </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                      subtitle
-                    </Typography>
-                    <Typography variant="body2">
-                      {p.description}
-                      <br />
                     </Typography>
                   </CardContent>
                   <CardActions
